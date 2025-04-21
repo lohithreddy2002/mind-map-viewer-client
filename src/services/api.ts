@@ -1,7 +1,7 @@
 import { Subject, Topic, ApiResponse } from '../types';
 
 // API base URL - direct access to backend
-const API_BASE_URL = process.env.REACT_APP_API_URL || 'http://localhost:3002/api';
+const API_BASE_URL = process.env.REACT_APP_API_URL || 'https://mindmap-backend-eight.vercel.app/api';
 const ADMIN_API_URL = `${API_BASE_URL}/admin`;
 
 // API Key for admin endpoints - in a real app, this would be stored more securely
