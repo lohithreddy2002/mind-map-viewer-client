@@ -1,46 +1,157 @@
-# Getting Started with Create React App
+# Mind Map Viewer
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A modern web application for visualizing and managing mind maps, built with React, TypeScript, and MongoDB.
+
+## Features
+
+- Interactive mind map visualization using D3.js
+- Real-time search functionality
+- Dark mode support
+- Responsive design for all devices
+- Admin panel for managing subjects and topics
+- Markdown content support
+- ZIP file import/export functionality
+- Serverless deployment ready
+
+## Tech Stack
+
+- Frontend:
+  - React with TypeScript
+  - D3.js for mind map visualization
+  - Tailwind CSS for styling
+  - Vite for build tooling
+
+- Backend:
+  - Node.js with Express
+  - MongoDB for data storage
+  - Serverless deployment support
+
+
+## Getting Started
+
+
+### UI
+
+### Home Page
+![Home UI](Home.png)
+
+### Admin Page
+
+![Admin UI](Admin.png)
+
+
+
+### Prerequisites
+
+- Node.js (v14 or higher)
+- MongoDB (local or Atlas)
+- npm or yarn
+
+### Installation
+
+1. Clone the repository:
+```bash
+git clone https://github.com/yourusername/mind-map-viewer.git
+cd mind-map-viewer
+```
+
+2. Install dependencies:
+```bash
+# Install frontend dependencies
+cd mind-map-viewer
+npm install
+
+# Install backend dependencies
+cd ../backend
+npm install
+```
+
+3. Set up environment variables:
+Create a `.env` file in the backend directory:
+```env
+MONGODB_URI=your_mongodb_connection_string
+PORT=3002
+NODE_ENV=development
+CORS_ORIGIN=http://localhost:3000
+```
+
+### Development
+
+1. Start the backend server:
+```bash
+cd backend
+npm run dev
+```
+
+2. Start the frontend development server:
+```bash
+cd mind-map-viewer
+npm run dev
+```
+
+The application will be available at:
+- Frontend: http://localhost:3000
+- Backend API: http://localhost:3002
 
 ## Available Scripts
 
-In the project directory, you can run:
+### Frontend
 
-### `npm start`
+- `npm run dev` - Start development server
+- `npm run build` - Build for production
+- `npm run preview` - Preview production build
+- `npm run lint` - Run ESLint
+- `npm run type-check` - Run TypeScript type checking
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+## Project Structure
 
-### `npm test`
+```
+mind-map-viewer/
+├── src/
+│   ├── components/     # React components
+│   ├── services/       # API services
+│   ├── types/          # TypeScript types
+│   ├── utils/          # Utility functions
+│   └── App.tsx         # Main application component
+├── public/             # Static assets
+└── package.json
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `npm run build`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Deployment
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### Vercel Deployment
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+1. Push your code to a GitHub repository
+2. Connect your repository to Vercel
+3. Configure environment variables in Vercel dashboard
+4. Deploy!
 
-### `npm run eject`
+### Environment Variables
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+Required environment variables for production:
+```env
+MONGODB_URI=your_mongodb_connection_string
+CORS_ORIGIN=your_frontend_url
+NODE_ENV=production
+```
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Contributing
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+1. Fork the repository
+2. Create your feature branch (`git checkout -b feature/amazing-feature`)
+3. Commit your changes (`git commit -m 'Add some amazing feature'`)
+4. Push to the branch (`git push origin feature/amazing-feature`)
+5. Open a Pull Request
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+## License
 
-## Learn More
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## Acknowledgments
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+- [D3.js](https://d3js.org/) for mind map visualization
+- [React](https://reactjs.org/) for the frontend framework
+- [MongoDB](https://www.mongodb.com/) for data storage
+- [Vercel](https://vercel.com/) for deployment platform
